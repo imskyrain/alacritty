@@ -6,30 +6,29 @@
 live_config_reload = true
 
 # ─── Shell ───────────────────────────────────────────────────────────────────
-[shell]
-program = "/usr/local/bin/fish"
-args = ["--login", "--command", "tmux new-session -A -D -s main"]
+[terminal.shell]
+program = "/usr/local/bin/tmux"
+args = ["new-session", "-A", "-s", "main"]
 
 # ─── 字体 ────────────────────────────────────────────────────────────────────
-# iTerm2 中使用 MesloLGLDZNF（Meslo LG S DZNF = Nerd Font）
-# alacritty 对应的包名为 MesloLGSNerdFont
+# iTerm2 中使用 MesloLGLDZNF，对应系统实装字体名 "MesloLGLDZ Nerd Font"
 [font]
 size = 12.0
 
 [font.normal]
-family = "MesloLGSNerdFont"
+family = "MesloLGLDZ Nerd Font"
 style = "Regular"
 
 [font.bold]
-family = "MesloLGSNerdFont"
+family = "MesloLGLDZ Nerd Font"
 style = "Bold"
 
 [font.italic]
-family = "MesloLGSNerdFont"
+family = "MesloLGLDZ Nerd Font"
 style = "Italic"
 
 [font.bold_italic]
-family = "MesloLGSNerdFont"
+family = "MesloLGLDZ Nerd Font"
 style = "Bold Italic"
 
 [font.offset]
@@ -54,9 +53,6 @@ lines = 40
 x = 20
 y = 22
 
-[window.visor]
-# macOS 上开启 visor 模式可以让窗口更接近 iTerm2 的全屏体验
-# hotkey = true
 
 # ─── 颜色方案 ─────────────────────────────────────────────────────────────────
 # 直接从 iTerm2 cookvim / Default profile 提取
@@ -108,8 +104,7 @@ foreground = "#1a1b25"
 
 # ─── 光标 ────────────────────────────────────────────────────────────────────
 [cursor]
-style.shape = "Beam"
-style.blinking = true
+style = "Beam"
 
 # ─── 滚动 ────────────────────────────────────────────────────────────────────
 [scrolling]
