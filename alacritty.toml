@@ -1,0 +1,258 @@
+# Alacritty 配置 - 对齐 iTerm2 风格
+# 颜色方案基于 iTerm2 的 Everforest soft dark
+# 字体使用 Meslo LG S Nerd Font（与 iTerm2 一致，支持 Nerd Font 图标）
+
+[general]
+live_config_reload = true
+
+# ─── Shell ───────────────────────────────────────────────────────────────────
+[shell]
+program = "/usr/local/bin/fish"
+args = ["--login", "--command", "tmux new-session -A -D -s main"]
+
+# ─── 字体 ────────────────────────────────────────────────────────────────────
+# iTerm2 中使用 MesloLGLDZNF（Meslo LG S DZNF = Nerd Font）
+# alacritty 对应的包名为 MesloLGSNerdFont
+[font]
+size = 12.0
+
+[font.normal]
+family = "MesloLGSNerdFont"
+style = "Regular"
+
+[font.bold]
+family = "MesloLGSNerdFont"
+style = "Bold"
+
+[font.italic]
+family = "MesloLGSNerdFont"
+style = "Italic"
+
+[font.bold_italic]
+family = "MesloLGSNerdFont"
+style = "Bold Italic"
+
+[font.offset]
+x = 0
+y = 9
+
+[font.glyph_offset]
+x = 0
+y = 3
+
+# ─── 窗口 ────────────────────────────────────────────────────────────────────
+# iTerm2 cookvim profile: 120x40, 带透明度 + blur
+[window]
+decorations = "transparent"
+opacity = 0.85  # iTerm2 cookvim Transparency=0.15 -> opacity=0.85
+
+[window.dimensions]
+columns = 120
+lines = 40
+
+[window.padding]
+x = 20
+y = 22
+
+[window.visor]
+# macOS 上开启 visor 模式可以让窗口更接近 iTerm2 的全屏体验
+# hotkey = true
+
+# ─── 颜色方案 ─────────────────────────────────────────────────────────────────
+# 直接从 iTerm2 cookvim / Default profile 提取
+# cookvim BG: #1a1b25, Default BG: #323d43
+# 此处使用 cookvim 的 BG（更深，视觉更好）
+[colors]
+draw_bold_text_with_bright_colors = false
+
+[colors.primary]
+background = "#1a1b25"
+foreground = "#d3c6aa"
+
+[colors.cursor]
+cursor = "#435055"
+
+[colors.selection]
+background = "#5d4251"
+text = "CellForeground"
+
+# normal (ANSI 0-7) - 来自 iTerm2 Everforest soft dark
+[colors.normal]
+black = "#7a8478"
+red = "#e67e80"
+green = "#a7c080"
+yellow = "#dbbc7f"
+blue = "#7fbbb3"
+magenta = "#d699b6"
+cyan = "#83c092"
+white = "#eee8d5"
+
+# bright (ANSI 8-15) - 来自 iTerm2 Everforest soft dark
+[colors.bright]
+black = "#859289"
+red = "#f85552"
+green = "#8da101"
+yellow = "#dfa000"
+blue = "#3a94c5"
+magenta = "#df69ba"
+cyan = "#35a77c"
+white = "#fdf6e3"
+
+[colors.search.matches]
+background = "#7fbbb3"
+foreground = "#1a1b25"
+
+[colors.search.focused_match]
+background = "#dbbc7f"
+foreground = "#1a1b25"
+
+# ─── 光标 ────────────────────────────────────────────────────────────────────
+[cursor]
+style.shape = "Beam"
+style.blinking = true
+
+# ─── 滚动 ────────────────────────────────────────────────────────────────────
+[scrolling]
+history = 100000
+multiplier = 4
+
+# ─── 选中文本 ─────────────────────────────────────────────────────────────────
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ''',│`|:"' ()[]{}<>'''
+
+# ─── 键绑定 ──────────────────────────────────────────────────────────────────
+# 对齐 iTerm2 常用快捷键习惯
+[keyboard]
+
+# 刷新 tmux
+[[keyboard.bindings]]
+chars = "\f"
+key = "R"
+mode = "~Vi|~Search"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "ClearHistory"
+key = "R"
+mode = "~Vi|~Search"
+mods = "Command"
+
+# 窗口管理 - 对齐 iTerm2
+[[keyboard.bindings]]
+action = "Hide"
+key = "W"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "Quit"
+key = "W"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "N"
+mods = "Command"
+
+# 单词/行跳转 - 对齐 iTerm2
+[[keyboard.bindings]]
+chars = "\u001Bb"
+key = "Left"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001Bf"
+key = "Right"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u0001"
+key = "Left"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0005"
+key = "Right"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0015"
+key = "Back"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001B\u007F"
+key = "Back"
+mods = "Alt"
+
+# tmux tab 管理（对齐 iTerm2 的 Cmd+T / Cmd+W / Cmd+[ / Cmd+]）
+[[keyboard.bindings]]
+chars = "\x1cc"
+key = "T"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\x1c&"
+key = "W"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\x1cp"
+key = "LBracket"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\x1cn"
+key = "RBracket"
+mods = "Command|Shift"
+
+# Cmd+1~9 切换 tab
+[[keyboard.bindings]]
+chars = "\x1c1"
+key = "Key1"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\x1c2"
+key = "Key2"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\x1c3"
+key = "Key3"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\x1c4"
+key = "Key4"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\x1c5"
+key = "Key5"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\x1c6"
+key = "Key6"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\x1c7"
+key = "Key7"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\x1c8"
+key = "Key8"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\x1c9"
+key = "Key9"
+mods = "Command"
+
+# Backspace 确保正常工作
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key = "Back"
