@@ -187,68 +187,68 @@ mods = "Alt"
 
 # tmux tab 管理（对齐 iTerm2 的 Cmd+T / Cmd+W / Cmd+[ / Cmd+]）
 [[keyboard.bindings]]
-chars = "\x1cc"
+chars = "\u001cc"
 key = "T"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\x1c&"
+chars = "\u001c&"
 key = "W"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\x1cp"
+chars = "\u001cp"
 key = "LBracket"
 mods = "Command|Shift"
 
 [[keyboard.bindings]]
-chars = "\x1cn"
+chars = "\u001cn"
 key = "RBracket"
 mods = "Command|Shift"
 
 # Cmd+1~9 切换 tab
 [[keyboard.bindings]]
-chars = "\x1c1"
+chars = "\u001c1"
 key = "Key1"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\x1c2"
+chars = "\u001c2"
 key = "Key2"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\x1c3"
+chars = "\u001c3"
 key = "Key3"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\x1c4"
+chars = "\u001c4"
 key = "Key4"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\x1c5"
+chars = "\u001c5"
 key = "Key5"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\x1c6"
+chars = "\u001c6"
 key = "Key6"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\x1c7"
+chars = "\u001c7"
 key = "Key7"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\x1c8"
+chars = "\u001c8"
 key = "Key8"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\x1c9"
+chars = "\u001c9"
 key = "Key9"
 mods = "Command"
 
