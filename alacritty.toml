@@ -54,53 +54,49 @@ x = 20
 y = 22
 
 
-# ─── 颜色方案 ─────────────────────────────────────────────────────────────────
-# 直接从 iTerm2 cookvim / Default profile 提取
-# cookvim BG: #1a1b25, Default BG: #323d43
-# 此处使用 cookvim 的 BG（更深，视觉更好）
+# ─── 颜色方案 (Cobalt2) ───────────────────────────────────────────────────────
 [colors]
 draw_bold_text_with_bright_colors = false
 
 [colors.primary]
-background = "#1a1b25"
-foreground = "#d3c6aa"
+foreground = "#ffffff"
+background = "#122738"
 
 [colors.cursor]
-cursor = "#435055"
+text = "#122738"
+cursor = "#ffffff"
 
 [colors.selection]
-background = "#5d4251"
-text = "CellForeground"
+text = "#ffffff"
+background = "#0050a4"
 
-# normal (ANSI 0-7) - 来自 iTerm2 Everforest soft dark
 [colors.normal]
-black = "#7a8478"
-red = "#e67e80"
-green = "#a7c080"
-yellow = "#dbbc7f"
-blue = "#7fbbb3"
-magenta = "#d699b6"
-cyan = "#83c092"
-white = "#eee8d5"
+black = "#000000"
+red = "#ff628c"
+green = "#3ad900"
+yellow = "#ffc600"
+blue = "#0088ff"
+magenta = "#fb94ff"
+cyan = "#80fcff"
+white = "#ffffff"
 
-# bright (ANSI 8-15) - 来自 iTerm2 Everforest soft dark
 [colors.bright]
-black = "#859289"
-red = "#f85552"
-green = "#8da101"
-yellow = "#dfa000"
-blue = "#3a94c5"
-magenta = "#df69ba"
-cyan = "#35a77c"
-white = "#fdf6e3"
+black = "#0050a4"
+red = "#ff628c"
+green = "#3ad900"
+yellow = "#ffc600"
+blue = "#0088ff"
+magenta = "#fb94ff"
+cyan = "#80fcff"
+white = "#ffffff"
 
 [colors.search.matches]
-background = "#7fbbb3"
-foreground = "#1a1b25"
+background = "#0088ff"
+foreground = "#122738"
 
 [colors.search.focused_match]
-background = "#dbbc7f"
-foreground = "#1a1b25"
+background = "#ffc600"
+foreground = "#122738"
 
 # ─── 光标 ────────────────────────────────────────────────────────────────────
 [cursor]
