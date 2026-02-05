@@ -40,10 +40,10 @@ x = 0
 y = 3
 
 # ─── 窗口 ────────────────────────────────────────────────────────────────────
-# iTerm2 cookvim profile: 120x40, 带透明度 + blur
+# iTerm2 Default profile: 不透明，对齐 iTerm2 实际使用效果
 [window]
 decorations = "transparent"
-opacity = 0.85  # iTerm2 cookvim Transparency=0.15 -> opacity=0.85
+opacity = 1.0
 
 [window.dimensions]
 columns = 120
