@@ -33,11 +33,11 @@ style = "Bold Italic"
 
 [font.offset]
 x = 0
-y = 9
+y = -2
 
 [font.glyph_offset]
 x = 0
-y = 3
+y = 0
 
 # ─── 窗口 ────────────────────────────────────────────────────────────────────
 # iTerm2 Default profile: 不透明，对齐 iTerm2 实际使用效果
